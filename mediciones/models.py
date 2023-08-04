@@ -30,7 +30,7 @@ class Region(AbstractName, AbstractAt):
     longitude = models.FloatField(default=0.0)
 
     def __str__(self):
-        return f"{self.area}"
+        return self.name
 
 class Measurements(AbstractAt):
     region = models.ForeignKey(Region, related_name='region', on_delete=models.CASCADE)
